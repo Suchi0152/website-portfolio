@@ -1,0 +1,1694 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kanigelpula Suchitra | AI & ML Engineer</title>
+
+  <meta name="description"
+        content="Portfolio of Kanigelpula Suchitra - B.Tech AI & ML student, software developer and machine learning enthusiast.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg: #f8fbff;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #64748b;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --border: #e2e8f0;
+      --nav: rgba(255,255,255,0.92);
+      --shadow: 0 10px 30px rgba(15,23,42,0.08);
+    }
+
+    body.dark {
+      --bg: #0b1120;
+      --card: #111827;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --primary: #60a5fa;
+      --primary-dark: #3b82f6;
+      --border: #263244;
+      --nav: rgba(11,17,32,0.94);
+      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      scroll-margin-top: 90px;
+      padding: 90px 7%;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: var(--nav);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      max-width: 1250px;
+      margin: auto;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 25px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-btn,
+    .menu-btn {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    /* ================= COMMON ================= */
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      color: var(--text);
+      background: var(--card);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* ================= HERO ================= */
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+    }
+
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-small {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      color: var(--primary);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 680px;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .hero-initial {
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #7dd3fc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 55px;
+      font-weight: 800;
+    }
+
+    .hero-card h3 {
+      margin-top: 20px;
+    }
+
+    .hero-card p {
+      margin: 5px auto 0;
+      font-size: 14px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 30px;
+    }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h3 {
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .info-card p {
+      color: var(--muted);
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .focus-item {
+      padding: 13px 15px;
+      border-radius: 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    /* ================= EXPERIENCE ================= */
+
+    .timeline {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .experience-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .experience-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .company {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .experience-card p {
+      color: var(--muted);
+    }
+
+    /* ================= SKILLS ================= */
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .skill {
+      padding: 11px 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-top {
+      height: 150px;
+      background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+
+    body.dark .project-top {
+      background: linear-gradient(135deg, #172554, #164e63);
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content h3 {
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 20px;
+    }
+
+    .tech {
+      font-size: 12px;
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* ================= CERTIFICATIONS ================= */
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .cert-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 22px;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    .cert-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .cert-card h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .cert-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ================= EDUCATION ================= */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .education-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .education-card .icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .education-card h3 {
+      color: var(--primary);
+      margin-bottom: 7px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-wrapper {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 25px;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact-info a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      border-radius: 8px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--primary);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      padding: 9px 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+    }
+
+    .social-links a:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: var(--nav);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 20px;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero,
+      .about-grid,
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 28px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-card {
+        max-width: 330px;
+        margin: auto;
+      }
+
+      nav {
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header>
+    <nav>
+
+      <a href="#home" class="logo">
+        Kanigelpula Suchitra
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+      <div class="nav-buttons">
+
+        <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+          🌙
+        </button>
+
+        <button class="menu-btn" id="menuBtn">
+          ☰
+        </button>
+
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- ================= HOME ================= -->
+
+  <section id="home">
+
+    <div class="hero">
+
+      <div>
+
+        <div class="hero-small">
+          Welcome, I'm
+        </div>
+
+        <h1>
+          Kanigelpula<br>
+          Suchitra
+        </h1>
+
+        <h2>
+          AI & ML Engineer
+        </h2>
+
+        <p>
+          Final-year B.Tech Artificial Intelligence & Machine Learning
+          student with foundational knowledge in software development,
+          machine learning, data analytics and problem solving.
+          Passionate about building practical and intelligent applications.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            View Projects →
+          </a>
+
+          <!-- GOOGLE DRIVE RESUME -->
+
+          <a
+            href="https://drive.google.com/file/d/16dcQHXxKxG4HvrHCwFybja7u6yZGTbI7/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline">
+            Download Resume ↓
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="hero-initial">
+          KS
+        </div>
+
+        <h3>
+          Kanigelpula Suchitra
+        </h3>
+
+        <p>
+          Final Year B.Tech (AIML)
+        </p>
+
+        <p>
+          Open to Internships & Full-Time Opportunities
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About Me</h2>
+        <p>Professional profile and core focus areas</p>
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="info-card">
+
+          <h3>Professional Profile</h3>
+
+          <p>
+            I am a final-year B.Tech student specializing in Artificial
+            Intelligence and Machine Learning. I have foundational
+            knowledge in Python, Java, C, web development, machine learning,
+            data analytics and software development.
+          </p>
+
+          <br>
+
+          <p>
+            I enjoy developing practical applications and continuously
+            improving my programming, analytical and problem-solving skills.
+            I am currently open to internship and full-time opportunities
+            in software development and AI/ML.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <h3>Core Focus Areas</h3>
+
+          <div class="focus-list">
+
+            <div class="focus-item">
+              🤖 Artificial Intelligence
+            </div>
+
+            <div class="focus-item">
+              🧠 Machine Learning
+            </div>
+
+            <div class="focus-item">
+              📊 Data Analytics
+            </div>
+
+            <div class="focus-item">
+              💻 Full Stack Development
+            </div>
+
+            <div class="focus-item">
+              🧩 Problem Solving & DSA
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= EXPERIENCE ================= -->
+
+  <section id="experience">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Experience</h2>
+
+        <p>
+          Internship and practical experience
+        </p>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <div class="experience-card">
+
+          <h3>
+            Java Full Stack Development Intern
+          </h3>
+
+          <div class="company">
+            EduSkills
+          </div>
+
+          <p>
+            Completed an 8-week virtual internship focused on Java
+            Full Stack Development. Worked with HTML, CSS, Bootstrap,
+            JavaScript, Core Java, Advanced Java, Spring, Spring Boot,
+            Hibernate, MySQL and Git.
+          </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+          <h3>
+            Android Developer Virtual Intern
+          </h3>
+
+          <div class="company">
+            AICTE / Google Android Developer Internship
+          </div>
+
+          <p>
+            Gained practical exposure to Android application development
+            through a structured virtual internship and project-based
+            learning.
+          </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+          <h3>
+            Java Development Intern
+          </h3>
+
+          <div class="company">
+            Cognifyz Technologies
+          </div>
+
+          <p>
+            Worked on Java programming assignments and practical projects
+            including Higher-Lower Game, Prime Number Pyramid,
+            Expense Tracker, Temperature Converter, Contact Book
+            and Job Scraper.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Technical Skills</h2>
+
+        <p>
+          Technologies and tools I work with
+        </p>
+
+      </div>
+
+
+      <div class="skills-grid">
+
+        <span class="skill">Python</span>
+        <span class="skill">Java</span>
+        <span class="skill">C</span>
+
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+
+        <span class="skill">Flutter</span>
+        <span class="skill">Dart</span>
+
+        <span class="skill">Flask</span>
+        <span class="skill">Tailwind CSS</span>
+
+        <span class="skill">MySQL</span>
+
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Data Analytics</span>
+
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">VS Code</span>
+
+        <span class="skill">Google Colab</span>
+
+        <span class="skill">Figma</span>
+
+        <span class="skill">DSA</span>
+
+        <span class="skill">Communication</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Leadership</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Featured Projects</h2>
+
+        <p>
+          Selected projects and practical applications
+        </p>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+          <div class="project-top">
+            🌦️
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              Real-Time Weather Application
+            </h3>
+
+            <p>
+              Flutter-based weather application that retrieves
+              real-time weather information using the OpenWeatherMap API.
+              Users can search for cities and view temperature, weather
+              status, humidity and weather icons.
+            </p>
+
+            <div class="project-tech">
+
+              <span class="tech">Flutter</span>
+              <span class="tech">Dart</span>
+              <span class="tech">REST API</span>
+              <span class="tech">OpenWeatherMap</span>
+
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/Suchi0152/weather_app_main"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+          <div class="project-top">
+            🕳️
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              AI Pothole Detection System
+            </h3>
+
+            <p>
+              Computer vision project designed to detect potholes and
+              road damage from images using an object detection model.
+              The system can help identify road distress automatically.
+            </p>
+
+            <div class="project-tech">
+
+              <span class="tech">Python</span>
+              <span class="tech">YOLO</span>
+              <span class="tech">Computer Vision</span>
+              <span class="tech">Machine Learning</span>
+
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/Suchi0152/Pothole_Detection"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+          <div class="project-top">
+            👋
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              Gesture Control System
+            </h3>
+
+            <p>
+              Computer vision project that uses hand gestures as an
+              interaction mechanism for controlling applications.
+            </p>
+
+            <div class="project-tech">
+
+              <span class="tech">Python</span>
+              <span class="tech">OpenCV</span>
+              <span class="tech">Computer Vision</span>
+
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/Suchi0152/gesture-control"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="project-card">
+
+          <div class="project-top">
+            🐟
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              Aquaculture Management Website
+            </h3>
+
+            <p>
+              Web application for aquaculture business management,
+              providing information about fish farming and supporting
+              customer order management.
+            </p>
+
+            <div class="project-tech">
+
+              <span class="tech">HTML</span>
+              <span class="tech">CSS</span>
+              <span class="tech">JavaScript</span>
+              <span class="tech">Web Development</span>
+
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/Suchi0152/Aquaculture"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CERTIFICATIONS ================= -->
+
+  <section id="certifications">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Certifications & Achievements</h2>
+
+        <p>
+          Learning milestones and accomplishments
+        </p>
+
+      </div>
+
+
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <h3>🏅 Java Full Stack Development</h3>
+          <p>EduSkills Virtual Internship</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>🏅 Android Developer</h3>
+          <p>AICTE / Google Android Developer Internship</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>🏅 IEEE Membership</h3>
+          <p>IEEE Student Membership / Access</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>🏆 2nd Prize</h3>
+          <p>Paper Presentation - Andhra Kesari University, 2026</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>💻 Java Internship</h3>
+          <p>Cognifyz Technologies</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>🎨 UI/UX Internship</h3>
+          <p>CodeAlpha</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= EDUCATION ================= -->
+
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Education</h2>
+
+        <p>
+          Academic background
+        </p>
+
+      </div>
+
+
+      <div class="education-grid">
+
+
+        <div class="education-card">
+
+          <div class="icon">🎓</div>
+
+          <h3>
+            B.Tech - AI & ML
+          </h3>
+
+          <p>
+            QIS College of Engineering & Technology
+          </p>
+
+          <br>
+
+          <p>
+            2023 - 2027
+          </p>
+
+          <p>
+            CGPA: 8.58
+          </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+          <div class="icon">📚</div>
+
+          <h3>
+            Intermediate - MPC
+          </h3>
+
+          <p>
+            Narayana Junior College
+          </p>
+
+          <br>
+
+          <p>
+            2021 - 2023
+          </p>
+
+          <p>
+            856 Marks
+          </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+          <div class="icon">🏫</div>
+
+          <h3>
+            SSC
+          </h3>
+
+          <p>
+            Narayana e-Techno School
+          </p>
+
+          <br>
+
+          <p>
+            2021
+          </p>
+
+          <p>
+            100%
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Get In Touch</h2>
+
+        <p>
+          Let's connect and build something meaningful
+        </p>
+
+      </div>
+
+
+      <div class="contact-wrapper">
+
+
+        <div class="contact-info">
+
+          <h3>
+            Kanigelpula Suchitra
+          </h3>
+
+          <p>
+            Final Year B.Tech (AIML)
+          </p>
+
+          <p>
+            📍 Andhra Pradesh, India
+          </p>
+
+          <p>
+            📧
+            <a href="mailto:kanigelpulasuchitra@gmail.com">
+              kanigelpulasuchitra@gmail.com
+            </a>
+          </p>
+
+          <p>
+            💼
+            <a
+              href="https://www.linkedin.com/in/kanigelpulasuchitra/"
+              target="_blank"
+              rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </p>
+
+          <p>
+            💻
+            <a
+              href="https://github.com/Suchi0152"
+              target="_blank"
+              rel="noopener noreferrer">
+              GitHub
+            </a>
+          </p>
+
+          <!-- LEETCODE -->
+
+          <p>
+            🧩
+            <a
+              href="https://leetcode.com/u/Kanigelpula_suchitra/"
+              target="_blank"
+              rel="noopener noreferrer">
+              LeetCode
+            </a>
+          </p>
+
+          <!-- RESUME -->
+
+          <p>
+            📄
+            <a
+              href="https://drive.google.com/file/d/16dcQHXxKxG4HvrHCwFybja7u6yZGTbI7/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Resume
+            </a>
+          </p>
+
+        </div>
+
+
+        <div class="contact-form">
+
+          <h3>
+            Send Message
+          </h3>
+
+          <form
+            action="mailto:kanigelpulasuchitra@gmail.com"
+            method="post"
+            enctype="text/plain">
+
+            <div class="form-group">
+
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="Name"
+                placeholder="Your name"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                placeholder="Your email"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="Message"
+                placeholder="Write your message..."
+                required></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary">
+
+              Send Message →
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="social-links">
+
+      <a
+        href="https://github.com/Suchi0152"
+        target="_blank"
+        rel="noopener noreferrer">
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/kanigelpulasuchitra/"
+        target="_blank"
+        rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <!-- LEETCODE ADDED -->
+
+      <a
+        href="https://leetcode.com/u/Kanigelpula_suchitra/"
+        target="_blank"
+        rel="noopener noreferrer">
+        LeetCode
+      </a>
+
+      <a
+        href="mailto:kanigelpulasuchitra@gmail.com">
+        Email
+      </a>
+
+      <!-- RESUME ADDED -->
+
+      <a
+        href="https://drive.google.com/file/d/16dcQHXxKxG4HvrHCwFybja7u6yZGTbI7/view?usp=drivesdk"
+        target="_blank"
+        rel="noopener noreferrer">
+        Resume
+      </a>
+
+    </div>
+
+    <p>
+      © 2026 Kanigelpula Suchitra | Personal Portfolio Website
+    </p>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    // ================= MOBILE MENU =================
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+
+      navLinks.classList.toggle("active");
+
+    });
+
+
+    // Close mobile menu after clicking a link
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+      });
+
+    });
+
+
+    // ================= DARK MODE =================
+
+    const themeBtn = document.getElementById("themeBtn");
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+
+      document.body.classList.add("dark");
+      themeBtn.textContent = "☀️";
+
+    }
+
+
+    themeBtn.addEventListener("click", function() {
+
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+
+        localStorage.setItem("theme", "dark");
+        themeBtn.textContent = "☀️";
+
+      } else {
+
+        localStorage.setItem("theme", "light");
+        themeBtn.textContent = "🌙";
+
+      }
+
+    });
+
+
+    // ================= ACTIVE NAVIGATION =================
+
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", function() {
+
+      let current = "";
+
+      sections.forEach(function(section) {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+
+          current = section.getAttribute("id");
+
+        }
+
+      });
+
+
+      navItems.forEach(function(link) {
+
+        link.style.color = "";
+
+        if (link.getAttribute("href") === "#" + current) {
+
+          link.style.color = "var(--primary)";
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
+```
